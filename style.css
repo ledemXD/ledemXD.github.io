@@ -99,8 +99,14 @@ a:link {
   }
 
   button {
+    border-color: #282b2d;
     font-family: 'Courier New', Courier, monospace;
     background-color: #382031;
     color: white;
 
+  }
+
+  button:hover {
+    transition: 0.3s;
+    box-shadow: 5px 5px 10px rgb(19, 17, 17);
   }
