@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ledem's Website</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>
+        WebFont.load({
+            google: {
+            families: ['Space Mono', 'Inter']
+            }
+        });
+        </script>
+
+        <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </head>
+    <body>
+        
+        <div class="topnav" id="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="game-progress.html">Game Progress</a>
+            <a href="#news">Code Stuff</a>
+            <a href="javascript:void(0);" class="icon" onclick="topnavBurger()">
+                <i class="fa fa-bars"></i>
+              </a>
+        </div>
+
+        <div style="padding-left: 16px;">
+            <center><h1>ledem's odd site</h1></center>
+            <center><h2>stuff to come later.. lol</h2></center>
+        
+            <figure>
+                <center><img src="cdn/images/wave-toon.png"></center>
+                <figcaption>he welcomes you!</figcaption>
+            </figure>
+        </div>
+
+        <script>
+            window.onscroll = function() {onScroll()};
+
+            var navbar = document.getElementById("topnav");
+            var sticky = navbar.offsetTop;
+
+
+            function topnavBurger() {
+                var x = document.getElementById("topnav");
+                if (x.className === "topnav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "topnav";
+                }
+              }
+
+            function onScroll() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                  } else {
+                    navbar.classList.remove("sticky");
+                  }
+            }
+        </script>
+
+        <!--
+            ! We probably dont even need this lol
+
+                    <pre>
+            <code class="language-lua">
+                function newToy()
+                    if false then
+                        return false
+                    end
+                    if true then
+                        return true
+                    end
+                end
+
+                if newToy then
+                    print("true")
+                end
+
+            </code>
+        </pre>
+        -->
+        
+    </body>
+</html>
