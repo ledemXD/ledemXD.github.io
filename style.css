@@ -2,6 +2,7 @@ body {
     font-family: 'Space Mono';
     background-color: rgb(10, 10, 10);
     color: white;
+    cursor: default;
 }
 
 ::selection {
@@ -99,7 +100,7 @@ a:link {
   }
 
   button {
-    border-color: #282b2d;
+    border-color: #181a1b;
     font-family: 'Courier New', Courier, monospace;
     background-color: #382031;
     color: white;
@@ -109,4 +110,8 @@ a:link {
   button:hover {
     transition: 0.3s;
     box-shadow: 5px 5px 10px rgb(19, 17, 17);
+  }
+
+  footer {
+    background-color: black;
   }
