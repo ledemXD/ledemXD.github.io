@@ -39,12 +39,17 @@
             <center><h2>stuff to come later.. lol</h2></center>
         
             <figure>
-                <center><img src="cdn/images/wave-toon.png"></center>
+                <center><img draggable="false" src="cdn/images/wave-toon.png"></center>
                 <figcaption>he welcomes you!</figcaption>
             </figure>
         </div>
 
         <script>
+            document.addEventListener("contextmenu", function(e){
+                if (e.target.nodeName === "IMG") {
+                    e.preventDefault();
+                }
+            }, false);
             window.onscroll = function() {onScroll()};
 
             var navbar = document.getElementById("topnav");
