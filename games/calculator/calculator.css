@@ -103,3 +103,17 @@ input:active[type=button] {
     width: 100%;
     height: 70%;
 }
+
+button {
+  border: dashed;
+  border-color: white;
+  background-color: black;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.code {
+  padding: 45px;
+  display: flex;
+  justify-content: center;
+}
