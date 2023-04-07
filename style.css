@@ -76,10 +76,6 @@ a:link {
     padding-top: 60px;
   }
 
-  img {
-    box-shadow: 5px 5px 10px rgb(67, 62, 62) ;
-  }
-
   .quote {
     border-left: 5px solid #3c4f59;
     background-color: #282b2d;
@@ -100,11 +96,12 @@ a:link {
   }
 
   button {
+    border-radius: 5px;
     border-color: #181a1b;
     font-family: 'Courier New', Courier, monospace;
-    background-color: #382031;
+    background-color: #120f11;
     color: white;
-
+    cursor: pointer;
   }
 
   button:hover {
