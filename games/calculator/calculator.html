@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./calculator.css">
+        <title>c a l c u l a t o r</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>
+        WebFont.load({
+            google: {
+            families: ['Space Mono', 'Inter']
+            }
+        });
+        </script>
+    </head>
+
+    <body>
+        <div class="topnav" id="topnav">
+            <a class="active" href="../../">Home</a>
+            <a href="../../projects">Projects</a>
+            <a href="../../game-progress">Game Progress</a>
+            <a href="../../code-stuff.html">Code Stuff</a>
+            <a href="javascript:void(0);" class="icon" onclick="topnavBurger()">
+                <i class="fa fa-bars"></i>
+              </a>
+        </div>
+        <script src="../../navbarHandler.js"></script>
+
+        <h1 style="text-align: center;">Calculator</h1>
+
+        <table class="calculator">
+            <tr>
+                <td colspan="3"> <input class="answer" type="text" id="result" disabled</td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="C" onclick="clear()"/> </td>
+                <td> <input type="button" value="×" onclick="display('*')"/> </td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="1" onclick="display('1')"/> </td>
+                <td> <input type="button" value="2" onclick="display('2')"/> </td>
+                <td> <input type="button" value="3" onclick="display('3')"/> </td>
+                <td> <input type="button" value="÷" onclick="display('/')"/> </td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="4" onclick="display('4')"/> </td>
+                <td> <input type="button" value="5" onclick="display('5')"/> </td>
+                <td> <input type="button" value="6" onclick="display('6')"/> </td>
+                <td> <input type="button" value="-" onclick="display('-')"/> </td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="7" onclick="display('7')"/> </td>
+                <td> <input type="button" value="8" onclick="display('8')"/> </td>
+                <td> <input type="button" value="9" onclick="display('9')"/> </td>
+                <td> <input type="button" value="+" onclick="display('+')"/> </td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="0" onclick="display('0')"/> </td>
+                <td> <input type="button" value="=" onclick="math()"/> </td>
+            </tr>
+        </table>
+        <script src="./calculator.js"></script>
+    </body>
+</html>

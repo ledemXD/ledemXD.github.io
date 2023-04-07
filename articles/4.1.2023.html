@@ -22,11 +22,12 @@
             <a class="active" href="../">Home</a>
             <a href="../projects">Projects</a>
             <a href="../game-progress">Game Progress</a>
-            <a href="javascript:void(0)">Code Stuff</a>
+            <a href="../code-stuff.html">Code Stuff</a>
             <a href="javascript:void(0);" class="icon" onclick="topnavBurger()">
                 <i class="fa fa-bars"></i>
               </a>
         </div>
+        <script src="navbarHandler.js"></script>
 
         <div class="content">
             <div class="date">
@@ -53,35 +54,5 @@
               <center><button onclick="history.back()" style="font-size: 24px;">Return</button></center>
             </footer>
         </div>
-
-        <script>
-          document.addEventListener("contextmenu", function(e){
-            if (e.target.nodeName === "IMG") {
-                e.preventDefault();
-            }
-        }, false);
-            window.onscroll = function() {onScroll()};
-
-            var navbar = document.getElementById("topnav");
-            var sticky = navbar.offsetTop;
-
-
-            function topnavBurger() {
-                var x = document.getElementById("topnav");
-                if (x.className === "topnav") {
-                  x.className += " responsive";
-                } else {
-                  x.className = "topnav";
-                }
-              }
-
-            function onScroll() {
-                if (window.pageYOffset >= sticky) {
-                    navbar.classList.add("sticky")
-                  } else {
-                    navbar.classList.remove("sticky");
-                  }
-            }
-        </script>
     </body>
 </html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ledem's Website</title>
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>
+            WebFont.load({
+                google: {
+                families: ['Space Mono', 'Inter']
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="topnav" id="topnav">
+            <a class="active" href="./">Home</a>
+            <a href="./projects">Projects</a>
+            <a href="./game-progress">Game Progress</a>
+            <a href="./code-stuff>Code Stuff</a>
+            <a href="javascript:void(0);" class="icon" onclick="topnavBurger()">
+                <i class="fa fa-bars"></i>
+              </a>
+        </div>
+        <script src="../../navbarHandler.js"></script>
+
+        <hr>
+        <h1 style="text-align: center;">Calculator HTML</h1>
+        <hr>
+        <pre>
+            <code id="code" class="language-html">
+                                                <!-HTML->
+                        <table class="calculator">
+                            <tr>
+                                <td colspan="3"> <input class="answer" type="text" id="result" disabled</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="button" value="C" onclick="clear()"/> </td>
+                                <td> <input type="button" value="×" onclick="display('*')"/> </td>
+                            </tr>
+                            <tr>
+                                <td> <input type="button" value="1" onclick="display('1')"/> </td>
+                                <td> <input type="button" value="2" onclick="display('2')"/> </td>
+                                <td> <input type="button" value="3" onclick="display('3')"/> </td>
+                                <td> <input type="button" value="÷" onclick="display('/')"/> </td>
+                            </tr>
+                            <tr>
+                                <td> <input type="button" value="4" onclick="display('4')"/> </td>
+                                <td> <input type="button" value="5" onclick="display('5')"/> </td>
+                                <td> <input type="button" value="6" onclick="display('6')"/> </td>
+                                <td> <input type="button" value="-" onclick="display('-')"/> </td>
+                            </tr>
+                            <tr>
+                                <td> <input type="button" value="7" onclick="display('7')"/> </td>
+                                <td> <input type="button" value="8" onclick="display('8')"/> </td>
+                                <td> <input type="button" value="9" onclick="display('9')"/> </td>
+                                <td> <input type="button" value="+" onclick="display('+')"/> </td>
+                            </tr>
+                            <tr>
+                                <td> <input type="button" value="0" onclick="display('0')"/> </td>
+                                <td> <input type="button" value="=" onclick="math()"/> </td>
+                            </tr>
+                        </table>
+                        <script src="./calculator.js"></script>
+            </code>
+        </pre>
+        <hr>
+        <h1 style="text-align: center;">Calculator Javascript</h1>
+        <hr>
+        <pre>
+            <code id="code" class="language-javascript">
+                    window.addEventListener('keydown', function (e) {
+                        if(this.document.activeElement == document.getElementById("result")) {
+                            return
+                        }
+                        else {
+                            if(e.key == "Backspace") {
+                                document.getElementById("result").value = "";
+                            }
+                            else if(e.key == "x"){
+                                document.getElementById("result").value += "*";
+                            }
+                            else if(e.key == "Enter"){
+                                math();
+                            }
+                            else if(e.key == "="){
+                                math();
+                            }
+                            else {
+                                display(e.key);
+                            }
+                        }
+                    }, false);
+                      
+                    
+                    function display(calculate) {
+                        document.getElementById("result").value += calculate;
+                    }
+                    
+                    function math() {
+                        var enteredValue = document.getElementById('result').value;
+                        var evaledValue = eval(enteredValue);
+                        document.getElementById('result').value = evaledValue;
+                    }
+                    
+                    function clear() {
+                        document.getElementById('result').value = "";
+                    }
+            </code>
+        </pre>
+        <hr>
+        <h1 style="text-align: center;">Calculator CSS</h1>
+        <hr>
+        <pre>
+            <code id="code" class="language-css">
+                body {
+                    font-family: 'space Mono';
+                    background-color: black;
+                    color: white;
+                }
+                
+                .topnav {
+                    overflow: hidden;
+                    background-color: #181717;
+                }
+                
+                .topnav a {
+                    font-family: 'Space Mono';
+                    float: left;
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 17px;
+                  }
+                  
+                  .topnav a:hover {
+                    background-color: #3b122b;
+                    color: rgb(111, 60, 76);
+                    transition: 0.3s;
+                  }
+                
+                  .topnav .icon {
+                    display: none;
+                  }
+                
+                  @media screen and (max-width: 600px) {
+                    .topnav a:not(:first-child) {display: none;}
+                    .topnav a.icon {
+                      float: right;
+                      display: block;
+                    }
+                  }
+                  
+                  @media screen and (max-width: 600px) {
+                    .topnav.responsive {position: relative;}
+                    .topnav.responsive .icon {
+                      position: absolute;
+                      right: 0;
+                      top: 0;
+                    }
+                    .topnav.responsive a {
+                      float: none;
+                      display: block;
+                      text-align: left;
+                    }
+                  }
+                
+                .calculator {
+                    padding: 10px;
+                    height: 380px;
+                    width: 400px;
+                    margin: auto;
+                    background-color: #202e23;
+                    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                    border: dashed;
+                    border-color: #022005;
+                }
+                
+                input[type=button] {
+                    font-family: 'Space Mono';
+                    background-color: black;
+                    color: white;
+                    border: dashed;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 20px;
+                    width: 100px;
+                    height: 65px;
+                }
+                
+                input:active[type=button] {
+                    background: rgb(4, 36, 16);
+                    color: black;
+                }
+                
+                .buttons-grid {
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    gap: 9px;
+                    padding: 100px;
+                }
+                
+                .grid-item {
+                    font-size: 30px;
+                    text-align: center;
+                }
+                
+                .answer {
+                    border:dashed;
+                    border-color: greenyellow;
+                    background-color: rgb(7, 11, 7);
+                    color: rgb(3, 255, 87);
+                    font-size: 35px;
+                    text-align: center;
+                    font-family: 'Courier New', Courier, monospace;
+                    block-size: 90px;
+                    width: 100%;
+                    height: 70%;
+                }
+            </code>
+        </pre>
+        <script src="../../code.js"></script>
+        <script>
+            document.querySelectorAll("code").forEach(function(element) {
+                element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+            });
+        </script>
+    </body>
+</html>
