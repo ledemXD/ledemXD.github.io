@@ -96,6 +96,7 @@ a:link {
   }
 
   button {
+    transition: 0.3s;
     border-radius: 5px;
     border-color: #181a1b;
     font-family: 'Courier New', Courier, monospace;
