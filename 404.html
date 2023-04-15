@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ledem's Website</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>
+        WebFont.load({
+            google: {
+            families: ['Space Mono', 'Inter']
+            }
+        });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>404</h1>
+            <p>this page does not exist.</p>
+            <p>we are very sorry but you can pick who to remove</p>
+            <div class="table-items">
+                <button id="heavyButton">
+                    <img src="./cdn/images/guy-sad.jpg">
+                    <figcaption id="heavyCaption">pls dont click on me</figcaption>
+                </button>
+                <br>
+                <button id="scoutButton">
+                    <img style="width: 225px;" src="./cdn/images/scoutSadHead.png">
+                    <figcaption id="scoutCaption">click on heavy not me!</figcaption>
+                </button>
+            </div>
+            <br>
+            <br>
+            <button onclick="history.back()">Go back to previous page.</button>
+        </div>
+        <script src="404.js"></script>
+    </body>
+</html>

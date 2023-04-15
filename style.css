@@ -5,6 +5,19 @@ body {
     cursor: default;
 }
 
+.container {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.box {
+  width: 15em;
+  border: 1px solid #ffffff;
+  background-color: black;
+  padding: 8px 12px;
+}
+
 ::selection {
     background-color: rgb(57, 5, 35);
     color: rgb(117, 23, 65);
@@ -127,11 +140,16 @@ a:link {
   }
 
   button {
-    border: dotted;
+    padding:  4px 5px;
+    border: 2px solid white;
     border-color: white;
     background-color: black;
     color: white;
     cursor: pointer;
+  }
+
+  button:hover {
+    transform: rotate(3deg);
   }
 
   footer {

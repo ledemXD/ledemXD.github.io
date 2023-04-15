@@ -1,0 +1,35 @@
+body {
+    background-color: #202020;
+    color: white;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Space Mono';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-image {
+    background-image: url('../../cdn/images/COD-BO2.png');
+
+    filter: blur(4px);
+    -webkit-filter: blur(8px);
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-text {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px #000000;
+}
