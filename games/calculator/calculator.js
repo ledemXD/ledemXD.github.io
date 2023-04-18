@@ -3,11 +3,11 @@ window.addEventListener('keydown', function (e) {
         return
     }
     else {
-        if(e.altKey || e.ctrlKey || e.shiftKey) {
+        if(e.altKey || e.ctrlKey) {
             return
         }
         else if(e.key == "Backspace") {
-            document.getElementById("result").value = "";
+            clear();
         }
         else if(e.key == "x"){
             document.getElementById("result").value += "*";
@@ -15,8 +15,14 @@ window.addEventListener('keydown', function (e) {
         else if(e.key == "Enter"){
             math();
         }
+        else if(e.key == 187){
+            document.getElementById("result").value += "+";  
+        }
         else if(e.key == "="){
             math();
+        }
+        else if(e.key == "Shift"){
+            return
         }
         else {
             display(e.key);

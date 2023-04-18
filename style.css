@@ -1,4 +1,5 @@
 body { 
+    margin: 0;
     font-family: 'Space Mono';
     background-color: rgb(10, 10, 10);
     color: white;
